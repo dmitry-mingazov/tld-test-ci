@@ -24,6 +24,7 @@
     "start": "set PORT=4000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "cross-env CI=true react-scripts test --env=jsdom",
     "test:coverage": "npm test -- --env=jsdom --coverage",
     "eject": "react-scripts eject"
   },
