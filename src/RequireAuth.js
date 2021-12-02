@@ -7,6 +7,8 @@ import { Navigate } from 'react-router-dom';
 const RequireAuth = ({ children }) => {
     const { isLoading, isAuthenticated } = useAuth0();
 
+    //will this break tests?
+    const nothinnng = 90;
     return isLoading 
         ? <Container>
             <Box 
