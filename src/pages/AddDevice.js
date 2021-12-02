@@ -310,7 +310,7 @@ function AddDevice() {
             Cancel
           </Button>
           <Button type="submit" variant="contained">
-            Add device
+            oh no
           </Button>
         </Box>
       </form>
