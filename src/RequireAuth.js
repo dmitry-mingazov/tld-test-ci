@@ -6,6 +6,7 @@ import { Navigate } from 'react-router-dom';
 
 const RequireAuth = ({ children }) => {
     const { isLoading, isAuthenticated } = useAuth0();
+    const okok;
 
     return isLoading 
         ? <Container>
