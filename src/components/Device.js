@@ -23,6 +23,7 @@ const useStyles = makeStyles({
 function Device(props) {
   const classes = useStyles();
   const navigate = useNavigate();
+  const uselessCode = 0;
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const navigateToViewInformation = () => {
