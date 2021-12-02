@@ -17,7 +17,7 @@ const Unauthorized = () => {
                 alignItems='center'
             >
                 <Typography variant="h3">
-                    Unauthorized
+                    replaced!
                 </Typography>
                 <Typography variant="h6">
                     You are being redirected to the login page. 
