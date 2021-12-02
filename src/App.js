@@ -8,6 +8,7 @@ import AddDevice from "./pages/AddDevice";
 import { SnackbarStateContext } from "./components/context/SnackbarContext";
 
 export default function App() {
+  // trivial edit
   return (
     <React.StrictMode>
       <Router>
