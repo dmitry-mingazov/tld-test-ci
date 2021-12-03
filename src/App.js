@@ -9,6 +9,7 @@ import { SnackbarStateContext } from "./components/context/SnackbarContext";
 
 export default function App() {
   const otto = 8; // trivial edit
+  const rotto;
   return (
     <React.StrictMode>
       <Router>
