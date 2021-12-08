@@ -11,17 +11,15 @@ import Layout from "../../components/Layout";
 jest.mock("../../services/DeviceService");
 
 const renderComponent = () => {
-  act(() => {
-    render(
-      <BrowserRouter>
-        <SnackbarStateContext>
-          <Layout>
-            <AddDevice />
-          </Layout>
-        </SnackbarStateContext>
-      </BrowserRouter>
-    );
-  })
+  render(
+    <BrowserRouter>
+      <SnackbarStateContext>
+        <Layout>
+          <AddDevice />
+        </Layout>
+      </SnackbarStateContext>
+    </BrowserRouter>
+  );
 };
 
 const changeTextboxValue = (name, value) => {
@@ -376,16 +374,6 @@ describe("TCPForm component", () => {
         screen.findByText("Device added successfully")
       ).resolves.toBeInTheDocument();
     });
-    changeSwitchValueInOut();
-    changeDropdownValue("tcp type out", "Client");
-    changeTextboxValue("tcp host", "Test host 2");
-    changeTextboxValue("tcp port", "Test port 2");
-    await act(async () => {
-      clickOnSubmit();
-    });
-    await expect(
-      screen.findByText("Device added successfully")
-    ).resolves.toBeInTheDocument();
   });
 });
 
