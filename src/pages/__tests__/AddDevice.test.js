@@ -335,7 +335,7 @@ describe("TCPForm component", () => {
     // changeSwitchValueInOut();
   });
 
-  test.skip("inserts data in all fields correctly with TCP", () => {
+  test("inserts data in all fields correctly with TCP", () => {
     renderComponent();
     changeDropdownValue("service interface", "TCP");
     changeDropdownValue("tcp type in", "Client");
