@@ -249,7 +249,7 @@ describe("HTTPForm component", () => {
 });
 
 describe("WebSocketForm component", () => {
-  test.skip("renders WebSocketForm component", () => {
+  test("renders WebSocketForm component", () => {
     renderComponent();
     changeDropdownValue("service interface", "WebSocket");
     expect(
@@ -264,7 +264,7 @@ describe("WebSocketForm component", () => {
     ).toBeInTheDocument();
   });
 
-  test.skip("inserts data in all fields correctly with WebSocket", () => {
+  test("inserts data in all fields correctly with WebSocket", () => {
     renderComponent();
     changeDropdownValue("service interface", "WebSocket");
     changeTextboxValue("web socket path", "Test path");
@@ -275,14 +275,14 @@ describe("WebSocketForm component", () => {
     checkTextboxToHaveValue("web socket url", "Test url");
   });
 
-  test.skip("submits form without all fields filled with WebSocket", () => {
+  test("submits form without all fields filled with WebSocket", () => {
     renderComponent();
     changeDropdownValue("service interface", "WebSocket");
     clickOnSubmit();
     expect(screen.getByText("Please fill the form")).toBeInTheDocument();
   });
 
-  test.skip("submits form correctly with WebSocket", async () => {
+  test("submits form correctly with WebSocket", async () => {
     DeviceService.createDevice.mockResolvedValue({
       something: true,
     });
@@ -308,7 +308,7 @@ describe("WebSocketForm component", () => {
 });
 
 describe("TCPForm component", () => {
-  test.skip("renders TCPForm component", () => {
+  test("renders TCPForm component", () => {
     renderComponent();
     changeDropdownValue("service interface", "TCP");
     expect(
@@ -335,7 +335,7 @@ describe("TCPForm component", () => {
     changeSwitchValueInOut();
   });
 
-  test.skip("inserts data in all fields correctly with TCP", () => {
+  test("inserts data in all fields correctly with TCP", () => {
     renderComponent();
     changeDropdownValue("service interface", "TCP");
     changeDropdownValue("tcp type in", "Client");
@@ -353,14 +353,14 @@ describe("TCPForm component", () => {
     checkTextboxToHaveValue("tcp port", "Test port 2");
   });
 
-  test.skip("submits form without all fields filled with TCP", () => {
+  test("submits form without all fields filled with TCP", () => {
     renderComponent();
     changeDropdownValue("service interface", "TCP");
     clickOnSubmit();
     expect(screen.getByText("Please fill the form")).toBeInTheDocument();
   });
 
-  test.skip("submits form correctly with TCP", async () => {
+  test("submits form correctly with TCP", async () => {
     DeviceService.createDevice.mockResolvedValue({
       something: true,
     });
@@ -390,7 +390,7 @@ describe("TCPForm component", () => {
 });
 
 describe("UDPForm component", () => {
-  test.skip("renders UDPForm component", () => {
+  test("renders UDPForm component", () => {
     renderComponent();
     changeDropdownValue("service interface", "UDP");
     expect(
@@ -403,7 +403,7 @@ describe("UDPForm component", () => {
     ).toBeInTheDocument();
   });
 
-  test.skip("inserts data in all fields correctly with UDP", () => {
+  test("inserts data in all fields correctly with UDP", () => {
     renderComponent();
     changeDropdownValue("service interface", "UDP");
     changeTextboxValue("udp port", "Test port");
@@ -415,14 +415,14 @@ describe("UDPForm component", () => {
     checkTextboxToHaveValue("udp address", "Test address");
   });
 
-  test.skip("submits form without all fields filled with UDP", () => {
+  test("submits form without all fields filled with UDP", () => {
     renderComponent();
     changeDropdownValue("service interface", "UDP");
     clickOnSubmit();
     expect(screen.getByText("Please fill the form")).toBeInTheDocument();
   });
 
-  test.skip("submits form correctly with UDP", async () => {
+  test("submits form correctly with UDP", async () => {
     DeviceService.createDevice.mockResolvedValue({
       something: true,
     });
