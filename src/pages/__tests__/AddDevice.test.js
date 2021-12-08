@@ -382,10 +382,10 @@ describe("TCPForm component", () => {
     changeTextboxValue("tcp port", "Test port 2");
     await act(async () => {
       clickOnSubmit();
-      await expect(
-        screen.findByText("Device added successfully")
-      ).resolves.toBeInTheDocument();
     });
+    await expect(
+      screen.findByText("Device added successfully")
+    ).resolves.toBeInTheDocument();
   });
 });
 
