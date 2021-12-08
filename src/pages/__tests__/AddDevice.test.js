@@ -334,7 +334,7 @@ describe("TCPForm component", () => {
     expect(
       screen.getByRole("textbox", { name: "tcp port" })
     ).toBeInTheDocument();
-    changeSwitchValueInOut();
+    // changeSwitchValueInOut();
   });
 
   test("inserts data in all fields correctly with TCP", () => {
