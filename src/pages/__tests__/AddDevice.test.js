@@ -353,7 +353,7 @@ describe("TCPForm component", () => {
     checkTextboxToHaveValue("tcp port", "Test port 2");
   });
 
-  test.skip("submits form without all fields filled with TCP", () => {
+  test("submits form without all fields filled with TCP", () => {
     renderComponent();
     changeDropdownValue("service interface", "TCP");
     clickOnSubmit();
