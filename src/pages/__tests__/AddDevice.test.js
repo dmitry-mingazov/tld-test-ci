@@ -248,7 +248,7 @@ describe("HTTPForm component", () => {
   });
 });
 
-skip("WebSocketForm component", () => {
+describe("WebSocketForm component", () => {
   test("renders WebSocketForm component", () => {
     renderComponent();
     changeDropdownValue("service interface", "WebSocket");
