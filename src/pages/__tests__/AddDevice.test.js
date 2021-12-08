@@ -355,14 +355,14 @@ describe("TCPForm component", () => {
     checkTextboxToHaveValue("tcp port", "Test port 2");
   });
 
-  test("submits form without all fields filled with TCP", () => {
+  test.skip("submits form without all fields filled with TCP", () => {
     renderComponent();
     changeDropdownValue("service interface", "TCP");
     clickOnSubmit();
     expect(screen.getByText("Please fill the form")).toBeInTheDocument();
   });
 
-  test("submits form correctly with TCP", async () => {
+  test.skip("submits form correctly with TCP", async () => {
     DeviceService.createDevice.mockResolvedValue({
       something: true,
     });
