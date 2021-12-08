@@ -140,7 +140,7 @@ describe("AddDevice component", () => {
 });
 
 describe("MQTTForm component", () => {
-  test.skip("renders MQTTForm component", () => {
+  test("renders MQTTForm component", () => {
     renderComponent();
     expect(
       screen.getByRole("textbox", { name: "mqtt broker" })
@@ -159,7 +159,7 @@ describe("MQTTForm component", () => {
     ).toBeInTheDocument();
   });
 
-  test.skip("inserts data in all fields correctly with MQTT", () => {
+  test("inserts data in all fields correctly with MQTT", () => {
     renderComponent();
     changeTextboxValue("mqtt broker", "Test broker");
     checkTextboxToHaveValue("mqtt broker", "Test broker");
@@ -173,13 +173,13 @@ describe("MQTTForm component", () => {
     checkDropdownToHaveValue("mqtt protocol version", "V3.1.1");
   });
 
-  test.skip("submits form without all fields filled with MQTT", () => {
+  test("submits form without all fields filled with MQTT", () => {
     renderComponent();
     clickOnSubmit();
     expect(screen.getByText("Please fill the form")).toBeInTheDocument();
   })
 
-  test.skip("submits form correctly with MQTT", async () => {
+  test("submits form correctly with MQTT", async () => {
     DeviceService.createDevice.mockResolvedValue({
       something: true,
     });
@@ -197,7 +197,7 @@ describe("MQTTForm component", () => {
 });
 
 describe("HTTPForm component", () => {
-  test.skip("renders HTTPForm component", () => {
+  test("renders HTTPForm component", () => {
     renderComponent();
     changeDropdownValue("service interface", "HTTP");
     expect(
@@ -212,7 +212,7 @@ describe("HTTPForm component", () => {
     ).toBeInTheDocument();
   });
 
-  test.skip("inserts data in all fields correctly with HTTP", () => {
+  test("inserts data in all fields correctly with HTTP", () => {
     renderComponent();
     changeDropdownValue("service interface", "HTTP");
     changeTextboxValue("http url", "Test url");
@@ -224,14 +224,14 @@ describe("HTTPForm component", () => {
     checkTextboxToHaveValue("http status", "Test status");
   });
 
-  test.skip("submits form without all fields filled with HTTP", () => {
+  test("submits form without all fields filled with HTTP", () => {
     renderComponent();
     changeDropdownValue("service interface", "HTTP");
     clickOnSubmit();
     expect(screen.getByText("Please fill the form")).toBeInTheDocument();
   });
 
-  test.skip("submits form correctly with HTTP", async () => {
+  test("submits form correctly with HTTP", async () => {
     DeviceService.createDevice.mockResolvedValue({
       something: true,
     });
