@@ -55,7 +55,7 @@ const clickOnSubmit = () => {
 };
 
 describe("AddDevice component", () => {
-  test.skip("renders AddDevice component", () => {
+  test("renders AddDevice component", () => {
     renderComponent();
     expect(screen.getAllByRole("textbox", { name: "device name" }).length).toBe(
       1
@@ -79,7 +79,7 @@ describe("AddDevice component", () => {
     );
   });
 
-  test.skip("adds another service form", () => {
+  test("adds another service form", () => {
     renderComponent();
     fireEvent.click(screen.getByRole("button", { name: "Add" }));
     expect(
@@ -103,31 +103,31 @@ describe("AddDevice component", () => {
     ).toBe(1);
   });
 
-  test.skip("inserts data correctly inside device name textfield", () => {
+  test("inserts data correctly inside device name textfield", () => {
     renderComponent();
     changeTextboxValue("device name", "Test name");
     checkTextboxToHaveValue("device name", "Test name");
   });
 
-  test.skip("inserts data correctly inside device description textfield", () => {
+  test("inserts data correctly inside device description textfield", () => {
     renderComponent();
     changeTextboxValue("device description", "Test description");
     checkTextboxToHaveValue("device description", "Test description");
   });
 
-  test.skip("selects an option correctly inside device type dropdown", () => {
+  test("selects an option correctly inside device type dropdown", () => {
     renderComponent();
     changeDropdownValue("device type", "Sensing");
     checkDropdownToHaveValue("device type", "Sensing");
   });
 
-  test.skip("selects an option correctly inside interface type dropdown", () => {
+  test("selects an option correctly inside interface type dropdown", () => {
     renderComponent();
     changeDropdownValue("service interface", "TCP");
     checkDropdownToHaveValue("service interface", "TCP");
   });
 
-  test.skip("changes in out switch correctly", () => {
+  test("changes in out switch correctly", () => {
     renderComponent();
     expect(
       screen.getByRole("checkbox", { name: "switch in out" }).checked
