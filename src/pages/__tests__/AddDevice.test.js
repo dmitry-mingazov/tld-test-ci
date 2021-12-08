@@ -35,9 +35,11 @@ const checkTextboxToHaveValue = (name, value) => {
 };
 
 const changeDropdownValue = (name, value) => {
-  fireEvent.mouseDown(screen.getByRole("button", { name: name }));
-  const listbox = within(screen.getByRole("listbox"));
-  fireEvent.click(listbox.getByText(value));
+  act(() => {
+    fireEvent.mouseDown(screen.getByRole("button", { name: name }));
+    const listbox = within(screen.getByRole("listbox"));
+    fireEvent.click(listbox.getByText(value));
+  })
 };
 
 const checkDropdownToHaveValue = (name, value) => {
