@@ -307,7 +307,7 @@ describe.skip("WebSocketForm component", () => {
   });
 });
 
-describe("TCPForm component", () => {
+describe.skip("TCPForm component", () => {
   test("renders TCPForm component", () => {
     renderComponent();
     changeDropdownValue("service interface", "TCP");
