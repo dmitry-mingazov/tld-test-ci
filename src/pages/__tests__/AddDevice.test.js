@@ -376,16 +376,16 @@ describe("TCPForm component", () => {
         screen.findByText("Device added successfully")
       ).resolves.toBeInTheDocument();
     });
-    // changeSwitchValueInOut();
-    // changeDropdownValue("tcp type out", "Client");
-    // changeTextboxValue("tcp host", "Test host 2");
-    // changeTextboxValue("tcp port", "Test port 2");
-    // await act(async () => {
-    //   clickOnSubmit();
-    //   await expect(
-    //     screen.findByText("Device added successfully")
-    //   ).resolves.toBeInTheDocument();
-    // });
+    changeSwitchValueInOut();
+    changeDropdownValue("tcp type out", "Client");
+    changeTextboxValue("tcp host", "Test host 2");
+    changeTextboxValue("tcp port", "Test port 2");
+    await act(async () => {
+      clickOnSubmit();
+      await expect(
+        screen.findByText("Device added successfully")
+      ).resolves.toBeInTheDocument();
+    });
   });
 });
 
